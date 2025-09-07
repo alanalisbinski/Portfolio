@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AlanaLisbinski| Desenvolvimento Full-Stack</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Devicon para ícones -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-<style>
+  <title>Alana Lisbinski - Portfólio</title>
+  <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -17,17 +13,16 @@
       line-height: 1.6;
     }
 
-    /* ======= HEADER ======= */
+    /* ===== HEADER ===== */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 10%;
+      padding: 15px 8%;
       background: #1e1e1e;
       position: sticky;
       top: 0;
       z-index: 1000;
-      flex-wrap: wrap;
     }
 
     header h1 {
@@ -35,70 +30,60 @@
       margin: 0;
     }
 
-    /* botão hamburguer */
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: 0;
-      color: #fff;
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-
-    /* nav desktop */
     nav {
       display: flex;
-      gap: 18px;
-      align-items: center;
+      gap: 20px;
     }
 
     nav a {
       text-decoration: none;
       color: #fff;
-      margin: 0 8px;
-      transition: color .25s;
+      transition: color 0.3s;
     }
 
     nav a:hover {
       color: #00adb5;
     }
 
-    /* ======= MOBILE ======= */
+    /* Botão hambúrguer */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #fff;
+    }
+
+    /* ===== MOBILE ===== */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        padding: 18px 5%;
-      }
-
-      .menu-toggle {
-        display: block;
-        margin: 8px 0;
-      }
-
       nav {
         display: none;
-        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
         width: 100%;
-        text-align: center;
-        margin-top: 10px;
         background: #1e1e1e;
-        border-top: 1px solid rgba(255,255,255,0.1);
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
       }
 
       nav a {
-        display: block;
         padding: 12px 0;
-        margin: 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
 
       nav.active {
         display: flex;
       }
+
+      .menu-toggle {
+        display: block;
+      }
     }
 
-    /* ======= SEÇÕES ======= */
+    /* ===== SEÇÕES ===== */
     section {
       padding: 40px 10%;
       text-align: center;
@@ -110,6 +95,11 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
+    }
+
+    #about p {
+      max-width: 600px;
+      margin: auto;
     }
 
     button {
@@ -126,6 +116,7 @@
       background: #008b91;
     }
 
+    /* Skills */
     .skills-container {
       display: flex;
       justify-content: center;
@@ -135,125 +126,65 @@
     }
 
     .skill {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 10px solid #00adb5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
       background: #1e1e1e;
-      padding: 20px;
-      border-radius: 10px;
-      min-width: 120px;
     }
   </style>
 </head>
 <body>
+  <!-- HEADER -->
+  <header>
+    <h1>Alana Lisbinski - Portfólio</h1>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projetos</a>
+      <a href="#timeline">Educação</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
 
-  <!-- ======= HEADER (substitua seu header atual por este) ======= -->
-<header id="main-header">
-  <h1>Alana Lisbinski - Portfólio</h1>
-
-  <nav id="nav" class="site-nav" aria-label="Navegação principal">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projetos</a>
-    <a href="#timeline">Educação</a>
-    <a href="#contact">Contato</a>
-  </nav>
-</header>
-  
-
-  <!-- About -->
-  <section class="about" id="about">
-    <img src="Imagem/fotos.png" alt="Minha Foto">
-    <div class="about-text">
-      <h2>Sobre Mim</h2>
-      <p>Olá me chamo Alana Cristina Lisbinski, tenho 18 anos e faço curso de desenvolvimento de sistemas,
-        aprendi liguagens de programação como: HTML, CSS, C++, JavaScript e Python, desenvolvi jogos, robôs e sites.
-        Com o ínicio em 2023 atualmente melhorei muito em meus projetos e estou sempre buscando aprender mais.</p>
-      <a href="https://www.linkedin.com/in/alana-lisbinski-869123376/" class="btn">Contate-me</a>
-    </div>
+  <!-- SOBRE MIM -->
+  <section id="about">
+    <img src="sua-foto.jpg" alt="Foto de Alana Lisbinski">
+    <h2>Sobre Mim</h2>
+    <p>
+      Olá, me chamo Alana Cristina Lisbinski, tenho 18 anos e faço curso de desenvolvimento de sistemas.
+      Aprendi linguagens de programação como: HTML, CSS, C++, JavaScript e Python.
+      Desenvolvi jogos, robôs e sites. Desde 2023 melhorei muito em meus projetos
+      e estou sempre buscando aprender mais.
+    </p>
+    <button>Contate-me</button>
   </section>
 
-  <!-- Skills -->
-  <section class="skills" id="skills">
+  <!-- SKILLS -->
+  <section id="skills">
     <h2>Skills</h2>
-    <div class="skill-grid">
-      <div class="skill">
-        <div class="circle"><span>98%</span></div>
-        <i class="devicon-html5-plain colored"></i>
-        <p>HTML</p>
-      </div>
-      <div class="skill">
-        <div class="circle"><span>98%</span></div>
-        <i class="devicon-css3-plain colored"></i>
-        <p>CSS</p>
-      </div>
-      <div class="skill">
-        <div class="circle"><span>98%</span></div>
-        <i class="devicon-javascript-plain colored"></i>
-        <p>JavaScript</p>
-      </div>
-      <div class="skill">
-        <div class="circle"><span>98%</span></div>
-        <i class="devicon-nodejs-plain colored"></i>
-        <p>Node.js</p>
-      </div>
-      <div class="skill">
-        <div class="circle"><span>98%</span></div>
-        <i class="devicon-react-original colored"></i>
-        <p>React</p>
-      </div>
+    <div class="skills-container">
+      <div class="skill">HTML 98%</div>
+      <div class="skill">CSS 98%</div>
+      <div class="skill">JS 98%</div>
+      <div class="skill">Python 95%</div>
     </div>
   </section>
 
-  <!-- Projetos -->
-  <section class="projects" id="projects">
-    <h2>Meus Projetos</h2>
-    <div class="project-grid">
-      <div class="card">
-        <img src="Imagem/ProjetoValderia.png" alt="Projeto 1">
-        <div class="card-body">
-          <h3>Projeto 1 - ReliquiasdeValderia</h3>
-          <p>Um RPG simpes desenvolvido em Python no curso de desenvolvimento de sistemas para o
-            apendizado de utilizar bibliotecas Tkinter.</p>
-          <a href="https://github.com/alanalisbinski/ReliquiasdeValderia" target="_blank">Ver Projeto</a>
-        </div>
-  </section>
+  <!-- SCRIPT -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
 
-  <!-- Timeline -->
-  <section class="timeline" id="timeline">
-    <h2>Educação e Experiência</h2>
-    <div class="timeline-line">
-      <div class="timeline-item">
-        <h3>2023 - 2024</h3>
-        <p>Iniciei o curso de programação no ensino médio desenvolvendo sites e trabalhando com Web Desing.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>2024 - 2025</h3>
-        <p>Aprendemos React Native e desenvolvimento Mobile.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>2025 - 2026</h3>
-        <p>Terminei o curso de programação aprendi a trabalhar com robótica.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section class="contact" id="contact">
-    <h2>Contato</h2>
-    <p>Email: alanalisbinski9@gmail.com</p>
-    <p>Telefone: (45) 99912-7255</p>
-  </section>
-
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
