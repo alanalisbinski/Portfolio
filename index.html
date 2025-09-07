@@ -1,190 +1,338 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alana Lisbinski - Portfólio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 8%;
-      background: #1e1e1e;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header h1 {
-      font-size: 20px;
-      margin: 0;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #00adb5;
-    }
-
-    /* Botão hambúrguer */
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-      color: #fff;
-    }
-
-    /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #1e1e1e;
-        flex-direction: column;
-        text-align: center;
-        padding: 10px 0;
-      }
-
-      nav a {
-        padding: 12px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-    /* ===== SEÇÕES ===== */
-    section {
-      padding: 40px 10%;
-      text-align: center;
-    }
-
-    #about img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    #about p {
-      max-width: 600px;
-      margin: auto;
-    }
-
-    button {
-      background: #00adb5;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
-      margin-top: 15px;
-    }
-
-    button:hover {
-      background: #008b91;
-    }
-
-    /* Skills */
-    .skills-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .skill {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 10px solid #00adb5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 18px;
-      background: #1e1e1e;
-    }
-  </style>
-</head>
-<body>
-  <!-- HEADER -->
-  <header>
-    <h1>Alana Lisbinski - Portfólio</h1>
-    <button class="menu-toggle" id="menu-toggle">☰</button>
-    <nav id="nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projetos</a>
-      <a href="#timeline">Educação</a>
-      <a href="#contact">Contato</a>
-    </nav>
-  </header>
-
-  <!-- SOBRE MIM -->
-  <section id="about">
-    <img src="sua-foto.jpg" alt="Foto de Alana Lisbinski">
-    <h2>Sobre Mim</h2>
-    <p>
-      Olá, me chamo Alana Cristina Lisbinski, tenho 18 anos e faço curso de desenvolvimento de sistemas.
-      Aprendi linguagens de programação como: HTML, CSS, C++, JavaScript e Python.
-      Desenvolvi jogos, robôs e sites. Desde 2023 melhorei muito em meus projetos
-      e estou sempre buscando aprender mais.
-    </p>
-    <button>Contate-me</button>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill">HTML 98%</div>
-      <div class="skill">CSS 98%</div>
-      <div class="skill">JS 98%</div>
-      <div class="skill">Python 95%</div>
-    </div>
-  </section>
-
-  <!-- SCRIPT -->
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("nav");
-
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  </script>
-</body>
-</html>
+      <!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>AlanaLisbinski| Desenvolvimento Full-Stack</title>  
+  <!-- Google Fonts -->  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">  
+  <!-- Devicon para ícones -->  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">  
+  <style>  
+    * {  
+      margin: 0;  
+      padding: 0;  
+      box-sizing: border-box;  
+      font-family: "Roboto", sans-serif;  
+    }  
+    body {  
+      background: #121212;  
+      color: #fff;  
+      line-height: 1.6;  
+    }  
+    header {  
+      display: flex;  
+      justify-content:space-between;  
+      align-items: center;  
+      padding: 20px 10%;  
+      background: #1e1e1e;  
+      position: sticky;  
+      top: 0;  
+      z-index: 1000;  
+    }  
+    header nav a {  
+      margin: 5px 10px;  
+      text-decoration: none;  
+      color: #fff;  
+      transition: color .3s;  
+    }  
+    header nav a:hover {  
+      color: #00adb5;  
+    }  
+  
+    /* About */  
+    .about {  
+      display: flex;  
+      align-items: center;  
+      padding: 60px 10%;  
+      gap: 40px;  
+      flex-wrap: wrap;  
+    }  
+    .about img {  
+      width: 250px;  
+      border-radius: 50%;  
+    }  
+    .about-text {  
+      max-width: 600px;  
+    }  
+    .btn {  
+      display: inline-block;  
+      margin-top: 15px;  
+      padding: 10px 20px;  
+      border: none;  
+      background: #00adb5;  
+      color: #fff;  
+      border-radius: 6px;  
+      cursor: pointer;  
+      text-decoration: none;  
+    }  
+    .btn:hover {  
+      background: #008b90;  
+    }  
+  
+    /* Skills */  
+    .skills {  
+      text-align: center;  
+      padding: 60px 10%;  
+    }  
+    .skills h2 {  
+      font-size: 2rem;  
+      margin-bottom: 40px;  
+    }  
+    .skill-grid {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));  
+      gap: 40px;  
+      justify-items: center;  
+    }  
+    .skill {  
+      text-align: center;  
+    }  
+    .circle {  
+      width: 120px;  
+      height: 120px;  
+      border-radius: 50%;  
+      display: flex;  
+      justify-content: center;  
+      align-items: center;  
+      font-size: 18px;  
+      font-weight: bold;  
+      margin: 0 auto 15px;  
+      background: conic-gradient(#00adb5 98%, #333 0);  
+    }  
+    .circle span {  
+      background: #121212;  
+      padding: 20px;  
+      border-radius: 50%;  
+    }  
+    .skill i {  
+      font-size: 2rem;  
+      margin-bottom: 10px;  
+      display: block;  
+    }  
+  
+    /* Projects */  
+    .projects {  
+      padding: 60px 10%;  
+      text-align: center;  
+    }  
+    .projects h2 {  
+      font-size: 2rem;  
+      margin-bottom: 40px;  
+    }  
+    .project-grid {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  
+      gap: 30px;  
+    }  
+    .card {  
+      width: 300px;  
+      height: 500px;  
+      background: #1e1e1e;  
+      border-radius: 12px;  
+      overflow: hidden;  
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);  
+      transition: transform .3s, box-shadow .3s;  
+    }  
+    .card:hover {  
+      transform: translateY(-8px);  
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);  
+    }  
+    .card img {  
+      width: 100%;  
+      height: 180px;  
+      object-fit: cover;  
+    }  
+    .card-body {  
+      padding: 20px;  
+    }  
+    .card-body h3 {  
+      margin-bottom: 10px;  
+      font-size: 1.2rem;  
+      color: #00adb5;  
+    }  
+    .card-body p {  
+      font-size: 0.95rem;  
+      margin-bottom: 15px;  
+      color: #ccc;  
+    }  
+    .card-body a {  
+      display: inline-block;  
+      padding: 8px 15px;  
+      background: #00adb5;  
+      color: #fff;  
+      text-decoration: none;  
+      border-radius: 6px;  
+      transition: background .3s;  
+    }  
+    .card-body a:hover {  
+      background: #008b90;  
+    }  
+  
+    /* Timeline */  
+    .timeline {  
+      padding: 60px 10%;  
+    }  
+    .timeline h2 {  
+      text-align: center;  
+      margin-bottom: 40px;  
+      font-size: 2rem;  
+    }  
+    .timeline-line {  
+      border-left: 2px solid #555;  
+      margin: 0 auto;  
+      padding-left: 40px;  
+      max-width: 600px;  
+      position: relative;  
+    }  
+    .timeline-item {  
+      margin-bottom: 40px;  
+      position: relative;  
+    }  
+    .timeline-item::before {  
+      content: "";  
+      position: absolute;  
+      left: -49px;  
+      top: 10px;  
+      width: 20px;  
+      height: 20px;  
+      background: #00adb5;  
+      border-radius: 50%;  
+      border: 3px solid #121212;  
+    }  
+    .timeline-item h3 {  
+      font-size: 1.2rem;  
+      margin-bottom: 5px;  
+      color: #00adb5;  
+    }  
+    .timeline-item p {  
+      font-size: 0.95rem;  
+      color: #ccc;  
+    }  
+  
+    /* Contato */  
+    .contact {  
+      padding: 60px 10%;  
+      text-align: center;  
+    }  
+  
+    /* Responsividade */  
+    @media (max-width: 768px) {  
+      .about {  
+        flex-direction: column;  
+        text-align: center;  
+      }  
+  
+      @media screen and (max-width: 768px){  
+        produto-container{  
+          width: 100%;  
+          flex-direction: column;  
+        }  
+    }  
+  </style>  
+</head>  
+<body>  
+  
+  <!-- Header -->  
+  <header>  
+    <h1>Alana Lisbinski - Portfólio</h1>  
+    <nav>  
+      <a href="#about">About</a>  
+      <a href="#skills">Skills</a>  
+      <a href="#projects">Projetos</a>  
+      <a href="#timeline">Educação</a>  
+      <a href="#contact">Contato</a>  
+    </nav>  
+  </header>  
+  
+  <!-- About -->  
+  <section class="about" id="about">  
+    <img src="Imagem/fotos.png" alt="Minha Foto">  
+    <div class="about-text">  
+      <h2>Sobre Mim</h2>  
+      <p>Olá me chamo Alana Cristina Lisbinski, tenho 18 anos e faço curso de desenvolvimento de sistemas,  
+        aprendi liguagens de programação como: HTML, CSS, C++, JavaScript e Python, desenvolvi jogos, robôs e sites.  
+        Com o ínicio em 2023 atualmente melhorei muito em meus projetos e estou sempre buscando aprender mais.</p>  
+      <a href="https://www.linkedin.com/in/alana-lisbinski-869123376/" class="btn">Contate-me</a>  
+    </div>  
+  </section>  
+  
+  <!-- Skills -->  
+  <section class="skills" id="skills">  
+    <h2>Skills</h2>  
+    <div class="skill-grid">  
+      <div class="skill">  
+        <div class="circle"><span>98%</span></div>  
+        <i class="devicon-html5-plain colored"></i>  
+        <p>HTML</p>  
+      </div>  
+      <div class="skill">  
+        <div class="circle"><span>98%</span></div>  
+        <i class="devicon-css3-plain colored"></i>  
+        <p>CSS</p>  
+      </div>  
+      <div class="skill">  
+        <div class="circle"><span>98%</span></div>  
+        <i class="devicon-javascript-plain colored"></i>  
+        <p>JavaScript</p>  
+      </div>  
+      <div class="skill">  
+        <div class="circle"><span>98%</span></div>  
+        <i class="devicon-nodejs-plain colored"></i>  
+        <p>Node.js</p>  
+      </div>  
+      <div class="skill">  
+        <div class="circle"><span>98%</span></div>  
+        <i class="devicon-react-original colored"></i>  
+        <p>React</p>  
+      </div>  
+    </div>  
+  </section>  
+  
+  <!-- Projetos -->  
+  <section class="projects" id="projects">  
+    <h2>Meus Projetos</h2>  
+    <div class="project-grid">  
+      <div class="card">  
+        <img src="Imagem/ProjetoValderia.png" alt="Projeto 1">  
+        <div class="card-body">  
+          <h3>Projeto 1 - ReliquiasdeValderia</h3>  
+          <p>Um RPG simpes desenvolvido em Python no curso de desenvolvimento de sistemas para o  
+            apendizado de utilizar bibliotecas Tkinter.</p>  
+          <a href="https://github.com/alanalisbinski/ReliquiasdeValderia" target="_blank">Ver Projeto</a>  
+        </div>  
+  </section>  
+  
+  <!-- Timeline -->  
+  <section class="timeline" id="timeline">  
+    <h2>Educação e Experiência</h2>  
+    <div class="timeline-line">  
+      <div class="timeline-item">  
+        <h3>2023 - 2024</h3>  
+        <p>Iniciei o curso de programação no ensino médio desenvolvendo sites e trabalhando com Web Desing.</p>  
+      </div>  
+      <div class="timeline-item">  
+        <h3>2024 - 2025</h3>  
+        <p>Aprendemos React Native e desenvolvimento Mobile.</p>  
+      </div>  
+      <div class="timeline-item">  
+        <h3>2025 - 2026</h3>  
+        <p>Terminei o curso de programação aprendi a trabalhar com robótica.</p>  
+      </div>  
+    </div>  
+  </section>  
+  
+  <!-- Contato -->  
+  <section class="contact" id="contact">  
+    <h2>Contato</h2>  
+    <p>Email: alanalisbinski9@gmail.com</p>  
+    <p>Telefone: (45) 99912-7255</p>  
+  </section>  
+  
+</body>  
+  
+</html>  
+  
+  
+  
+  
