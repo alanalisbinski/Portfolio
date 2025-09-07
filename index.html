@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
   <!-- Devicon para ícones -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  
+
 <style>
   /* Reset e estilos básicos */
   * {
@@ -332,25 +332,74 @@
     .card img {
       height: 150px;
     }
+    
+  /* botão hamburguer */
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+      }
+    
+    /* nav padrão */
+  nav {
+    display: flex;
+  }
+
+  /* responsividade */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #1e1e1e;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      display: block;
+      padding: 10px 0;
+    }
+
+    nav.active {
+      display: flex;
+    }
+  }
+</style
   }
 </style>
 
-
-
-      
+<script>
+  // Script para abrir/fechar menu
+  document.getElementById("menu-toggle").addEventListener("click", function() {
+    document.getElementById("nav").classList.toggle("active");
+  });
+</script>
+        
 </head>
 <body>
 
   <!-- Header -->
   <header>
     <h1>Alana Lisbinski - Portfólio</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projetos</a>
-      <a href="#timeline">Educação</a>
-      <a href="#contact">Contato</a>
-    </nav>
+
+    <!-- Botão hambúrguer -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+    <nav id="nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projetos</a>
+    <a href="#timeline">Educação</a>
+    <a href="#contact">Contato</a>
+  </nav>
   </header>
 
   <!-- About -->
@@ -440,6 +489,7 @@
 </body>
 
 </html>
+
 
 
 
