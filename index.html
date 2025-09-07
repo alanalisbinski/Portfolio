@@ -370,6 +370,85 @@
       display: flex;
     }
   }
+    /* ======= CSS HAMBURGUER (cole no final do seu <style>) ======= */
+
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #1e1e1e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+/* botão hambúrguer (escondido em telas grandes) */
+.menu-toggle{
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* nav padrão (desktop) */
+.site-nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* links */
+.site-nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 8px;
+  transition: color .25s;
+}
+.site-nav a:hover { color: #00adb5; }
+
+/* ======= MOBILE ======= */
+@media (max-width: 768px) {
+  #main-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 5%;
+  }
+
+  /* mostra o botão */
+  .menu-toggle {
+    display: block;
+    margin: 8px 0;
+  }
+
+  /* esconde o nav por padrão no mobile */
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    background: #1e1e1e;
+    border-top: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 12px 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+  }
+
+  /* quando ativo, mostra o menu */
+  .site-nav.active {
+    display: flex;
+  }
+      }
+  
 </style
   }
 </style>
@@ -384,23 +463,24 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Alana Lisbinski - Portfólio</h1>
+  <!-- ======= HEADER (substitua seu header atual por este) ======= -->
+<header id="main-header">
+  <h1>Alana Lisbinski - Portfólio</h1>
 
-    <!-- Botão hambúrguer -->
-  <div class="menu-toggle" id="menu-toggle">
-  ☰
-  </div>
+  <!-- botão hambúrguer -->
+  <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+    ☰
+  </button>
 
-    <nav id="nav">
+  <nav id="nav" class="site-nav" aria-label="Navegação principal">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projetos</a>
     <a href="#timeline">Educação</a>
     <a href="#contact">Contato</a>
   </nav>
-  </header>
+</header>
+  
 
   <!-- About -->
   <section class="about" id="about">
@@ -489,6 +569,7 @@
 </body>
 
 </html>
+
 
 
 
