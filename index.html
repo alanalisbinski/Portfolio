@@ -333,14 +333,6 @@
       height: 150px;
     }
     
-  /* botão hamburguer */
-  .menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #fff;
-      }
-    
     /* nav padrão */
   nav {
     display: flex;
@@ -452,13 +444,6 @@
 </style
   }
 </style>
-
-<script>
-  // Script para abrir/fechar menu
-  document.getElementById("menu-toggle").addEventListener("click", function() {
-    document.getElementById("nav").classList.toggle("active");
-  });
-</script>
   
 </head>
 <body>
@@ -466,11 +451,6 @@
   <!-- ======= HEADER (substitua seu header atual por este) ======= -->
 <header id="main-header">
   <h1>Alana Lisbinski - Portfólio</h1>
-
-  <!-- botão hambúrguer -->
-  <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-    ☰
-  </button>
 
   <nav id="nav" class="site-nav" aria-label="Navegação principal">
     <a href="#about">About</a>
@@ -569,6 +549,7 @@
 </body>
 
 </html>
+
 
 
 
